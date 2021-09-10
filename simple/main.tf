@@ -7,7 +7,7 @@ resource "aws_route53_zone" "dev_zone" {
 }
 
 resource "aws_vpc_dhcp_options" "this" {
-  domain_name_servers = "AmazonProvidedDNS"
+  domain_name_servers = ["AmazonProvidedDNS"]
 }
 
 resource "aws_vpc_dhcp_options_association" "this" {
